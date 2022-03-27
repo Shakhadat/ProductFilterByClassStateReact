@@ -1,18 +1,12 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
-class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-   
-
-  }
-
-  handleFilterTextChange=(e)=>{
-    this.props.onFilterChangeText(e.target.value)
-  }
-  handleInstockChange=(e)=>{
-      this.props.onInSctockChange(e.target.value)
-  }
+class SearchBar extends PureComponent {
+  handleFilterTextChange = (e) => {
+    this.props.onFilterChangeText(e.target.value);
+  };
+  handleInstockChange = (e) => {
+    this.props.onInSctockChange(e.target.checked);
+  };
   render() {
     return (
       <>
